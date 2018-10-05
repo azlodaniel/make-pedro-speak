@@ -9,11 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.87.0",
-    "body-parser": "^1.17.2",
-    "express": "^4.15.3",
+    "aws-sdk": "^2.328.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
     "raspicam": "^0.2.14",
-    "socket.io": "^2.0.3",
-    "speaker": "^0.3.0"
+    "socket.io": "^2.1.1",
+    "speaker": "^0.3.1"
   }
 }
