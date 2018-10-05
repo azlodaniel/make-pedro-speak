@@ -17,6 +17,8 @@
 	<input type="text" id="text">
 	<button onclick="speak()">speak</button>
 	<button onclick="identify()">identify</button>
+	<button onclick="startRandomlySpeaking()">start random</button>
+	<button onclick="stopRandomlySpeaking()">stop random</button>
 	<br />
 	<br />
 	<label id="speaking"></label>
@@ -24,11 +26,11 @@
 	<script type="text/javascript">
 		var socket = io();
 		
-		socket.on('speakingStarted', function(msg){
+		socket.on('speakingStarted', function(msg) {
 			document.getElementById('speaking').innerText = `Pedro is saying, "${msg.text}"`;
 		});
 		
-		socket.on('speakingStopped', function(msg){
+		socket.on('speakingStopped', function(msg) {
 			document.getElementById('speaking').innerText = '';
 		});
 		
@@ -39,9 +41,21 @@
 			http.send(text);
 		}
 
-		function identify(){
+		function identify() {
 			var http = new XMLHttpRequest();
 			http.open('POST', '/identify', true);
+			http.send();
+		}
+
+		function startRandomlySpeaking() {
+			var http = new XMLHttpRequest();
+			http.open('POST', '/startRandomlySpeaking', true);
+			http.send();
+		}
+
+		function stopRandomlySpeaking() {
+			var http = new XMLHttpRequest();
+			http.open('POST', '/stopRandomlySpeaking', true);
 			http.send();
 		}
 	</script>
