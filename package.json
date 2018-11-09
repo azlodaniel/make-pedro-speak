@@ -9,9 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.328.0",
+    "aws-sdk": "^2.352.0",
     "body-parser": "^1.18.3",
-    "express": "^4.16.3",
+    "express": "^4.16.4",
     "raspicam": "^0.2.14",
     "socket.io": "^2.1.1",
     "speaker": "^0.3.1"
